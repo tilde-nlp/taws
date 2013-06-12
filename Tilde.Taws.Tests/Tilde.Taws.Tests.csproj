@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A45C177-4CFB-4749-ABE8-7B691ACE30BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tilde.Taws.Tests</RootNamespace>
+    <AssemblyName>Tilde.Taws.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Tilde.Taws\Properties\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Tests\ApiTests.cs" />
+    <Compile Include="Tests\Html5AnnotatorTests.cs" />
+    <Compile Include="Tests\Html5ChunkerTests.cs" />
+    <Compile Include="Tests\XliffAnnotatorTests.cs" />
+    <Compile Include="Tests\XliffParseTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\Example1_HTML5.html.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\Example1_XML.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\mostofits20.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EX-xliff-prov-rt-1-post-MT-moses.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EXb-xliff-prov-rt-1-post-extract.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EXc-xliff-prov-rt-1-post-seg.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EXd-xliff-prov-rt-1-post-ta.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EXe-xliff-prov-rt-1-post-term.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EXf-xliff-prov-rt-1-post-matrex.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EXg-xliff-prov-rt-1-post-bing.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EXh-xliff-prov-rt-1-post-m4loc.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\roundtrip\EXi-xliff-prov-rt-1-post-PE.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology1html.html.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology1xml.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology2html.html.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology2xml.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology3html.html.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology3xml.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology4html.html.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology4xml.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology5html.html.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology5xml.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology6html.html.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology6xml.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology7xml.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology8xml.xml.xlf" />
+    <EmbeddedResource Include="TestData\xliff\testsuite\terminology\terminology9xml.xml.xlf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tilde.Taws\Tilde.Taws.csproj">
+      <Project>{4967071d-751e-4b0d-84aa-aef142dbbe15}</Project>
+      <Name>Tilde.Taws</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tilde.Its\Tilde.Its.csproj">
+      <Project>{d622f692-028e-4132-86f1-c8debf7ebf6e}</Project>
+      <Name>Tilde.Its</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestData\html5\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

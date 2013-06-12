@@ -1,0 +1,22 @@
+﻿<text xmlns:its="http://www.w3.org/2005/11/its" >
+  <its:rules version="2.0">
+    <its:termRule selector="//term[1]" term="yes" termInfoPointer="id(@def)"/>
+    <its:termRule selector="//term[2]" term="yes" termInfoPointer="id (@def)"/>
+    <its:termRule selector="//term[3]" term="yes" termInfoPointer="//*[@attr='id(@id3)']"/>
+    <its:termRule selector="//term[4]" term="yes" termInfoPointer="id(./id)"/>
+    <its:termRule selector="//term[5]" term="yes" termInfoPointer="id(@doesntexist)"/>
+  </its:rules>
+  <p>
+    <term def="id1">term1</term>
+    <term def="id2">term2</term>
+    <term def="id3">term3</term>
+    <term><id>id4</id>term4</term>
+    <term def="id5">term5</term>
+  </p>
+  <ids>
+    <id xml:id="id1">term1</id>
+    <id xml:id="id2">term2</id>
+    <id xml:id="id3" attr="id(@id3)">term3</id>
+    <id xml:id="id4">term4</id>
+  </ids>
+</text>

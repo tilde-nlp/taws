@@ -1,0 +1,144 @@
+﻿@{ ViewBag.BodyId = "about"; }
+
+<article>
+    <div>
+        <h1>About</h1>
+
+        <p>
+            <a href="http://www.w3.org/TR/its20/">ITS 2.0</a> content analysis and terminology annotation are performed by a dedicated Terminology Annotation Web Service API – a Web-based interface for statistical term candidate annotation using state-of-the-art methods as well as term bank based term candidate annotation using terminology resources from <a href="http://www.eurotermbank.com">EuroTermBank</a>.
+        </p>
+
+        <img src="@Url.Content("~/Content/images/etb-logo.png")" alt="Euro Term Bank logo" />
+
+        <p>
+            The Terminology Annotation Web Service API can be integrated in various natural language processing workflows, for instance, machine translation, localization, terminology management and other tasks that may benefit from automatic terminology annotation.
+        </p>
+        <p>
+            The showcase and the underlying Terminology Annotation Web Service API are developed by <a href="http://www.tilde.com">Tilde</a>.<br />
+            The development is funded by the <a href="http://www.w3.org/International/multilingualweb/lt/">MultilingualWeb-LT</a> project.
+        </p>
+
+        <h2>Tilde TAWS API</h2>
+
+        <p>TAWS exposes a RESTful API over HTTP.</p>
+
+        <h3>HTML5</h3>
+        <h4>Request</h4>
+        <code><pre>POST /api/html5 HTTP/1.1
+Host: taws.tilde.com
+Content-Length: 62
+
+&lt;!DOCTYPE html&gt;&lt;html lang="en"&gt;&lt;body&gt;hello world&lt;/body&gt;&lt;/html&gt;</pre></code>
+
+        <h4>Response</h4>
+        <code><pre>HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body its-annotators-ref="terminology|http://tilde.com/term-annotation-service"&gt;
+&lt;span its-term="yes" its-term-confidence="1"&gt;hello world&lt;/span&gt;
+&lt;/body&gt;&lt;/html&gt;</pre></code>
+
+        <h3>XLIFF</h3>
+        <h4>Request</h4>
+        <code><pre>POST /api/xliff HTTP/1.1
+Host: taws.tilde.com
+Content-Length: 307
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2"&gt;
+&lt;file original="hello.txt" source-language="en-us" target-language="lv-lv" datatype="plaintext"&gt;
+&lt;body&gt;
+&lt;trans-unit id='1'&gt;
+&lt;source&gt;hello world&lt;/source&gt;
+&lt;/trans-unit&gt;
+&lt;/body&gt;
+&lt;/file&gt;
+&lt;/xliff&gt;</pre></code>
+
+        <h4>Response</h4>
+        <code><pre>HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:its="http://www.w3.org/2005/11/its" xmlns:itsx="http://www.w3.org/ns/its-xliff/"
+       its:annotatorsRef="terminology|http://tilde.com/term-annotation-service"&gt;
+ &lt;file original="hello.txt" source-language="en-us" datatype="plaintext"&gt;
+  &lt;body&gt;
+   &lt;trans-unit id="1"&gt;
+    &lt;source&gt;&lt;mrk mtype="term" itsx:termConfidence="1"&gt;hello world&lt;/mrk&gt;&lt;/source&gt;
+   &lt;/trans-unit&gt;
+  &lt;/body&gt;
+ &lt;/file&gt;
+&lt;/xliff&gt;</pre></code>
+
+        <h3>Plaintext</h3>
+        <h4>Request</h4>
+        <code><pre>POST /api/plaintext?lang=en HTTP/1.1
+Host: taws.tilde.com
+Content-Length: 11
+
+hello world</pre></code>
+
+        <h4>Response</h4>
+        <code><pre>HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+&lt;/head&gt;
+&lt;body its-annotators-ref="terminology|http://tilde.com/term-annotation-service"&gt;
+  &lt;span its-term="yes" its-term-confidence="1"&gt;hello world&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre></code>
+
+        <h3>Parameters</h3>
+
+        <p>Every single piece of text in a document must have a language identifier or it will not be annotated since the language is unknown. You can add a <code>lang</code> parameter to the query string to set the default language of the content without modifying the markup.</p>
+        <code>/api/html5?lang=en</code>
+
+        <p>The Domain data category identifies the topic of the document content. If the document contains no domain information, terminology from all domains is annotated. You can optionally add one or more <code>domain</code> parameters to the query string to set the default domain(s) of the content without modifying the markup. Each domain must be a <em>EuroVoc</em> domain code (two or four digit string). A parent domain (two digit code) includes all child domains.</p>
+        <code>
+        /api/html5?domain=32<br />
+        /api/html5?domain=66&domain=2441<br />
+        /api/html5?lang=en&domain=32&domain=40<br />
+        </code>
+
+        <p>If your document contains references to external rules with relative paths (e.g., <code>&lt;link rel="its-rules" href="rules.xml"&gt;</code>), you can add a <code>baseUri</code> parameter specifying an accessible base path (e.g., <code>http://example.org/its/</code>), otherwise the rules cannot be loaded by TAWS.</p>
+        <code>
+        /api/html5?baseUri=http://example.org/its/<br />
+        /api/html5?lang=en&baseUri=http://example.org/its/
+        </code>
+
+        <p>By default, terminology is annotated using both the <em>Statistical terminology annotation</em> (<code>statistical</code>) and the <em>Term bank based terminology annotation</em> (<code>termbank</code>) method. To use only one method for annotation of terminology, specify it with a <code>method</code> parameter in the query string:</p>
+        <code>
+        /api/html5?method=statistical<br />
+        /api/html5?method=termbank<br />
+        /api/html5?lang=en&domain=32&method=termbank
+        </code>
+        <p>Note that the Domain data category is ignored if the <em>Term bank based terminology annotation</em> (<code>termbank</code>) method is not used.</p>
+
+        <h4>Plaintext</h4>
+        <p>For convenience, it is possible to annotate terminology in plaintext documents as well. The text will be converted and returned as an HTML5 document since there is no standard way to annotate terminology in plaintext using ITS 2.0 metadata.</p>
+        <p>Because there is no ITS 2.0 markup present in plaintext content, the <code>lang</code> parameter is mandatory for plaintext documents. You can optionally add one or more <code>domain</code> parameters to specify the domain of the text.</p>
+
+        <h3>Response HTTP Status Codes</h3>
+        <p>TAWS will respond with one of the following status codes:</p>
+        <ul>
+            <li><em>200 OK</em> – document was annotated successfully;</li>
+            <li><em>400 Bad Request</em> – invalid document or parameters passed to TAWS;</li>
+            <li><em>500 Internal Server Error</em> – there is a problem with the service.</li>
+        </ul>
+        <p>The content of the response will be the annotated document or an error message in case of an error.</p>
+
+        <h3>Limitations</h3>
+        <ul>
+            <li>Only input in UTF-8 is supported.</li>
+            <li>Domain values are limited to <em>EuroVoc</em> codes.</li>
+            <li>Only the first 50 000 characters of the submitted document will be annotated.<br />The remaining document will be returned to the user without annotated terminology.<br />This is a limitation for showcase purposes in order not to allow misuse of the service.</li>
+        </ul>
+    </div>
+</article>

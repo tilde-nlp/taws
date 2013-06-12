@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilde.Taws", "Tilde.Taws\Tilde.Taws.csproj", "{4967071D-751E-4B0D-84AA-AEF142DBBE15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilde.Taws.Tests", "Tilde.Taws.Tests\Tilde.Taws.Tests.csproj", "{5A45C177-4CFB-4749-ABE8-7B691ACE30BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilde.Its", "Tilde.Its\Tilde.Its.csproj", "{D622F692-028E-4132-86F1-C8DEBF7EBF6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tilde.Its.Tests", "Tilde.Its.Tests\Tilde.Its.Tests.csproj", "{1DF1D4E6-8D28-45FA-AD85-131D062ECB06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlParserSharp", "HtmlParserSharp\HtmlParserSharp.csproj", "{FD150915-D34F-436A-92C1-80AA505DA754}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{F5B43FC3-FFCC-45E0-9F1C-07951605F540}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Documentation.shfbproj = Documentation\Documentation.shfbproj
+		Documentation\TAWS Documentation.chm = Documentation\TAWS Documentation.chm
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C5FC1A5-DAB5-419A-8B23-6F492505B95C}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Tilde.Its\\Tilde.Its.csproj
+		SccProjectName1 = Tilde.Its
+		SccLocalPath1 = Tilde.Its
+		SccProjectUniqueName2 = Tilde.Its.Tests\\Tilde.Its.Tests.csproj
+		SccProjectName2 = Tilde.Its.Tests
+		SccLocalPath2 = Tilde.Its.Tests
+		SccProjectUniqueName3 = HtmlParserSharp\\HtmlParserSharp.csproj
+		SccProjectName3 = HtmlParserSharp
+		SccLocalPath3 = HtmlParserSharp
+		SccProjectUniqueName4 = Tilde.Taws\\Tilde.Taws.csproj
+		SccProjectName4 = Tilde.Taws
+		SccLocalPath4 = Tilde.Taws
+		SccProjectUniqueName5 = Tilde.Taws.Tests\\Tilde.Taws.Tests.csproj
+		SccProjectName5 = Tilde.Taws.Tests
+		SccLocalPath5 = Tilde.Taws.Tests
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4967071D-751E-4B0D-84AA-AEF142DBBE15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4967071D-751E-4B0D-84AA-AEF142DBBE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4967071D-751E-4B0D-84AA-AEF142DBBE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4967071D-751E-4B0D-84AA-AEF142DBBE15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A45C177-4CFB-4749-ABE8-7B691ACE30BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A45C177-4CFB-4749-ABE8-7B691ACE30BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A45C177-4CFB-4749-ABE8-7B691ACE30BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A45C177-4CFB-4749-ABE8-7B691ACE30BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D622F692-028E-4132-86F1-C8DEBF7EBF6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D622F692-028E-4132-86F1-C8DEBF7EBF6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D622F692-028E-4132-86F1-C8DEBF7EBF6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D622F692-028E-4132-86F1-C8DEBF7EBF6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DF1D4E6-8D28-45FA-AD85-131D062ECB06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF1D4E6-8D28-45FA-AD85-131D062ECB06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF1D4E6-8D28-45FA-AD85-131D062ECB06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF1D4E6-8D28-45FA-AD85-131D062ECB06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD150915-D34F-436A-92C1-80AA505DA754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD150915-D34F-436A-92C1-80AA505DA754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD150915-D34F-436A-92C1-80AA505DA754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD150915-D34F-436A-92C1-80AA505DA754}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

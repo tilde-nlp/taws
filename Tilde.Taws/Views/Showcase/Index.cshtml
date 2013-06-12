@@ -1,0 +1,27 @@
+﻿@{ ViewBag.BodyId = "showcase"; }
+
+<article>
+    <div id="wrapper">
+        <h1>ITS 2.0 Enriched<br>Terminology Annotation Showcase</h1>
+        <p>
+            Welcome to the Terminology Annotation Showcase. The showcase allows you to automatically annotate terminology in <a href="http://www.w3.org/TR/its20/">ITS 2.0</a> enriched content in HTML5, XLIFF and plaintext formats.
+        </p>
+        <p>
+            <a href="http://www.w3.org/TR/its20/">ITS 2.0</a> content analysis and terminology annotation are performed by a dedicated Terminology Annotation Web Service API – a Web-based interface for statistical term candidate annotation using state-of-the-art methods as well as term bank based term candidate annotation using terminology resources from <a href="http://www.eurotermbank.com/">EuroTermBank</a>.
+        </p>
+        <p>
+            The Terminology Annotation Web Service API can be integrated in various natural language processing workflows, for instance, machine translation, localization, terminology management and other tasks that may benefit from automatic terminology annotation.
+        </p>
+        <p>
+            Select one of the options below to annotate terminology in plaintext, HTML5 or XLIFF content.
+        </p>
+    </div>
+</article>
+
+<nav>
+    <ul>
+        <li class="plaintext"><a href="@Url.Action("plaintext")">Text</a></li>
+        <li class="html5"><a href="@Url.Action("html5")">HTML5</a></li>
+        <li class="xliff"><a href="@Url.Action("xliff")">XLIFF</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,147 @@
+﻿@model Tilde.Taws.Models.ApiDocument
+@{ Layout = "~/Views/Showcase/Layout.cshtml"; }
+
+<article class="input">
+    @using (Html.BeginForm(null, null, FormMethod.Post, htmlAttributes: new { enctype = "multipart/form-data" }))
+    {
+        <div id="params">
+            <p>
+                @Html.LabelFor(m => m.Language, "Language")
+                @Html.DropDownListFor(m => m.Language, (IEnumerable<SelectListItem>)ViewBag.Languages)
+            </p>
+
+             <p>
+                <label>Method</label>
+                <input type="checkbox" id="Method1" name="Methods" value="@Tilde.Taws.Controllers.ApiController.StatisticalMethod" class="method" checked="checked"><label for="Method1" class="checkbox">Statistical terminology annotation</label><br>
+                <input type="checkbox" id="Method2" name="Methods" value="@Tilde.Taws.Controllers.ApiController.TermBankMethod" class="method" checked="checked"><label for="Method2" class="checkbox">Term bank based terminology annotation</label>
+            </p>
+            
+            <p>
+                <label for="Domains">Domain</label>
+                <select id="Domains" name="Domains" size="12">
+                    <option value="" selected="selected">All domains</option>
+                    @foreach (SelectListItem domain in ViewBag.Domains)
+                    {
+                        <option value="@domain.Value">@domain.Text</option>
+                    }
+                </select>
+            </p>
+        </div>
+
+        <div id="input">
+            <div id="accordion">
+                <h1>Text</h1>
+                <div>
+                    <textarea name="Text" rows="30" cols="10"></textarea><br />
+                    @RenderSection("examples_" + ViewBag.Format + "_text", required: false)
+                </div>
+                <h1>URL</h1>
+                <div class="url">
+                    <input type="text" id="url" name="url" placeholder="http://" /><br />
+
+                    <br />
+
+                    @RenderSection("examples_" + ViewBag.Format + "_url", required: false)
+                </div>
+                <h1>File Upload</h1>
+                <div class="file">
+                    <!--[if !IE]> --><input type="text" id="fakefile" readonly="readonly" placeholder="Click to select a file" /><!-- <![endif]-->
+                    <input type="file" id="file" name="file" /><br />
+
+                    <br />
+
+                    @RenderSection("examples_" + ViewBag.Format + "_file", required: false)
+                </div>
+            </div>
+
+            <input id="Reset" type="reset" value="Reset" class="button">
+            <input id="Submit" type="submit" value="Submit" class="button">
+        </div>
+        
+        @RenderBody()
+    }
+
+    <div id="loader"><img src="@Url.Content("~/Content/images/spinner.gif")" width="235" height="235" alt="Loading" /></div>
+</article>
+
+@section styles {
+    @Styles.Render("~/styles/jquery-ui")
+}
+
+@section scripts {
+    @Scripts.Render("~/scripts/jquery")
+    @Scripts.Render("~/scripts/jquery-ui")
+
+    <script type="text/javascript">
+        $(function () {
+            $('form').submit(function (e) {
+                if (update()) {
+                    alert('Please select at least one method.');
+                    return false;
+                }
+                $('article').addClass('loading');
+            });
+
+            function update() {
+                var method1 = $('#Method1').is(':checked');
+                var method2 = $('#Method2').is(':checked');
+                
+                var none = !method1 && !method2;
+                var unguided = method1 && !method2;
+
+                $('#Domains').prop('disabled', none || unguided);
+
+                return none;
+            }
+
+            $('form input:checkbox').change(update);
+            $('form input[type=reset]').click(function() { setTimeout(update, 1); });
+
+            // FF fix
+            $(window).bind("unload", function () {
+                setTimeout(function () { $('article').removeClass('loading'); }, 200);
+            });
+
+            $('#accordion').accordion({ active: @ViewBag.AccordionActive, collapsible: true });
+            
+            $('#input .url a').click(function () {
+                $('#url').val($(this).text());
+                $('#Language').val($(this).data('lang'));
+                $('#Domains option[value="' + $(this).data('domain') + '"]').prop('selected', true);
+                return false;
+            });
+
+            $('#input .file a').click(function () {
+                $('#Language').val($(this).data('lang'));
+                $('#Domains option[value="' + $(this).data('domain') + '"]').prop('selected', true);
+                $('textarea').val($('#' + $(this).data('id')).html());
+                $('#accordion').accordion('option', { active: 0 });
+                return false;
+            });
+        });
+    </script>
+
+    <!--[if IE]>
+    <script>
+        $(function() {
+            $('form').submit(function() {
+                $('#loader img').attr('src', $('#loader img').attr('src'));
+            });
+        });
+     </script>
+    <![endif]-->
+
+    <!--[if !IE]> -->
+    <script>
+        $(function() {
+            var wrapper = $('<div/>').css({ height: 0, width: 0, 'overflow': 'hidden' });
+            var fileInput = $(':file').wrap(wrapper);
+
+            $('#fakefile').click(function () { fileInput.click(); });
+            fileInput.change(function () { $('#fakefile').val($(this).val()); });
+        });
+    </script>
+    <!-- <![endif]-->
+
+    @RenderSection("scripts", required: false)
+}

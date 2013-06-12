@@ -1,0 +1,47 @@
+﻿@model Tilde.Taws.Models.ApiDocument
+@{ ViewBag.BodyId = "results"; }
+
+<article class="@ViewBag.State @ViewBag.Format">
+    <div id="output">
+        <div id="document" data-path="@(Model.BaseUri != null ? @Model.BaseUri : "/")">
+            <pre>@ViewBag.Results</pre>
+        </div>
+
+        <a class="back" href="@Url.Action(ViewBag.Format)">Go back</a>
+        @using (Html.BeginForm("ResultDownload", "Showcase")) {
+            <input type="hidden" name="id" value="@ViewBag.DownloadID" />
+            <input type="hidden" name="format" value="@ViewBag.Format" />
+            <input type="submit" value="Download" class="button">
+        }
+    </div>
+
+    <div id="errors">
+        @if (ViewBag.Error is Exception)
+        {
+            <h1>An error has occured</h1>
+            <p>@ViewBag.Error.Message</p>
+            if (ViewBag.Error.InnerException != null) {
+                <p>@ViewBag.Error.InnerException.Message</p>
+            }
+        }
+    </div>
+</article>
+
+@section styles {
+    @Styles.Render("~/styles/visualization")
+}
+
+@section scripts {
+    @Scripts.Render("~/scripts/jquery")
+    @Scripts.Render("~/scripts/jquery-ui")
+    @Scripts.Render("~/scripts/visualization")
+
+    <script type="text/javascript">
+        $(function () {
+            $('a.back').click(function () {
+                history.back();
+                return false;
+            });
+        });
+    </script>
+}

@@ -1,0 +1,10 @@
+﻿<myTopic xmlns="http://mynsuri.example.com">
+  <its:rules xmlns:its="http://www.w3.org/2005/11/its" version="2.0" xmlns:n="http://abc.example.com">
+    <its:translateRule selector="//n:term" translate="no" xmlns:n="http://mynsuri.example.com"/>
+    <its:translateRule selector="//n:term[2]" translate="yes" xmlns:n="http://othernamespace.example.com"/>
+  </its:rules>
+  <p>
+    ITS defines <term>data category</term> as an abstract concept for a particular type of
+    information for internationalization and localization of <term>XML</term> schemas and documents.
+  </p>
+</myTopic>

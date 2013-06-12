@@ -1,0 +1,39 @@
+﻿span[its-term="yes"] {
+    color: black !important;
+    background: #fba43a !important;
+}
+
+span[its-term="yes"][its-term-info-ref] {
+    background: purple !important;
+    color: white !important;
+}
+
+span[its-term="yes"].non-tilde {
+    background: gray;
+    color: black;
+}
+
+.ui-tooltip {
+	padding: 8px;
+	position: absolute;
+	z-index: 9999;
+	-webkit-box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px #aaa;
+    background: white;
+    border-width: 2px;
+    display: inline-block !important;
+    max-width: 250px;
+
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+.annotator { font-style: italic; font-size: 10px; margin-bottom: 5px; }
+
+.langset, .langset ul { list-style-type: none; padding: 0; margin: 0; }
+.langset .lang { line-height: 2em; border-bottom: 1px solid #ccc; }
+.langset .ntig .term { line-height: 2em; font-weight: bold; }
+.langset .ntig .xref { line-height: 2em; margin-left: 15px; font-style: italic; color: #555; font-size: 10px; line-height: 1.2em; }
+
+.tbx .confidence { border: 1px solid red; margin-bottom: 3px; padding: 5px; }
+.tbx .confidence span { font-weight: bold; float: right; margin-right: 10px; }

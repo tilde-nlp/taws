@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Showcase</title>
+    <meta name="viewport" content="width=device-width">
+    @Styles.Render("~/styles/site")
+    @RenderSection("styles", required: false)
+    <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.ico")">
+</head>
+<body id="@ViewBag.BodyId">
+
+<header>
+
+    <a href="http://www.w3.org/International/multilingualweb/lt/"><img class="ltweb-logo" src="@Url.Content("~/Content/images/ltweb-logo.png")" width="132" height="119" alt="Multilingual Web-LT logo"></a>
+    <a href="http://www.tilde.com/"><img class="tilde-logo" src="@Url.Content("~/Content/images/tilde-logo.png")" width="72" height="66" alt="Tilde logo"></a>
+
+    <ul>
+        <li><a href="@Url.Action("index")">Home</a></li>
+        <li><a href="@Url.Action("about")">About</a></li>
+        <li><a href="@Url.Action("contact")">Contact</a></li>
+    </ul>
+
+</header>
+
+@RenderBody()
+
+@RenderSection("scripts", required: false)
+
+</body>
+</html>

@@ -1,4 +1,6 @@
-﻿using System.Xml.Linq;
+﻿using System;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace Tilde.Its
 {
@@ -56,7 +58,75 @@ namespace Tilde.Its
         /// <inheritdoc/>
         protected override bool DefaultValue(XObject node)
         {
-            return ElementOrAttribute(element => true, attribute => false);
+            return XmlOrHtmlDocument<bool>(
+                xml: () => ElementOrAttribute(element => true, attribute => false),
+                html: () => ElementOrAttribute(element => true, attribute => DefaultValueForHtml(attribute)));
+        }
+
+        /// <summary>
+        /// Returns the default value for an HTML attribute.
+        /// </summary>
+        /// <param name="attribute">Attribute to check.</param>
+        /// <returns>Default value.</returns>
+        protected virtual bool DefaultValueForHtml(XAttribute attribute)
+        {
+            if (attribute == null || attribute.Name == null)
+                return false;
+
+            // http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#the-translate-attribute
+            if (DefaultValueHtmlForSpecificParents(attribute, "abbr", "th")) return true;
+            if (DefaultValueHtmlForSpecificParents(attribute, "alt", "area", "img", "input")) return true;
+            if (DefaultValueHtmlForSpecificParents(attribute, "content", "meta")) return true; // todo
+            if (DefaultValueHtmlForSpecificParents(attribute, "download", "a", "area")) return true;
+            if (DefaultValueHtmlForSpecificParents(attribute, "label", "menuitem", "menu", "optgroup", "option", "track")) return true;
+            if (DefaultValueHtmlForSpecificParents(attribute, "placeholder", "input", "textarea")) return true;
+            if (DefaultValueHtmlForSpecificParents(attribute, "srcdoc", "iframe")) return true;
+            if (DefaultValueForHtmlElements(attribute, "lang", "style", "title")) return true;
+
+            return false;
+        }
+
+        /// <summary>
+        /// Checks if an attribute is translatable give a set of rules. 
+        /// </summary>
+        /// <param name="attribute">Attribute to check.</param>
+        /// <param name="attributeName">Name of the attribute that is translatable by default.</param>
+        /// <param name="parentElementNames">Allowed names of parents of the attribute.</param>
+        /// <returns>Whether the attribute is translatable.</returns>
+        protected virtual bool DefaultValueHtmlForSpecificParents(XAttribute attribute, string attributeName, params string[] parentElementNames)
+        {
+            if (attribute.Name == attributeName &&
+                attribute.Parent != null &&
+                attribute.Parent.Name != null &&
+                attribute.Parent.Name.Namespace == ItsHtmlDocument.XhtmlNamespace &&
+                parentElementNames.Contains(attribute.Parent.Name.LocalName))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Checks if an attribute is translatable if it has one of the specified names
+        /// and its parent is an HTML element.
+        /// </summary>
+        /// <param name="attribute">Attribute to check.</param>
+        /// <param name="attributeNames">Allowed attribute names.</param>
+        /// <returns>Whether the attribute is translatable.</returns>
+        protected virtual bool DefaultValueForHtmlElements(XAttribute attribute, params string[] attributeNames)
+        {
+            foreach (string name in attributeNames)
+            {
+                if (attribute.Name == name &&
+                    attribute.Parent != null && attribute.Parent.Name != null &&
+                    attribute.Parent.Name.Namespace == ItsHtmlDocument.XhtmlNamespace)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         /// <inheritdoc/>

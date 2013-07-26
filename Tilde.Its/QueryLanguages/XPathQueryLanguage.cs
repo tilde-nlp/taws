@@ -56,6 +56,18 @@ namespace Tilde.Its
                 {
                     yield return (TNodeType)nav.UnderlyingObject;
                 }
+
+                // in .NET * does not seem to include attributes
+                // this is a hackish workaround
+                if (expression.Expression.EndsWith("*") &&
+                    nav.UnderlyingObject.GetType() == typeof(XElement) && 
+                    (typeof(TNodeType) == typeof(XAttribute) || typeof(TNodeType) == typeof(XObject)))
+                {
+                    foreach (TNodeType attr in (nav.UnderlyingObject as XElement).Attributes().Cast<TNodeType>())
+                    {
+                        yield return attr;
+                    }
+                }
             }
         }
 

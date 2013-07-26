@@ -7,7 +7,9 @@ ITS 2.0 Test Suite
 ------------------
 
 Tests from the official ITS 2.0 test suite are used in the project.
-https://github.com/finnle/ITS-2.0-Testsuite
+https://github.com/finnle/ITS-2.0-Testsuite 
+
+The test suite uses the [W3C Test Suite Licence](http://www.w3.org/Consortium/Legal/2008/04-testsuite-license.html).
 
 The files from the test suite (in the `its2.0` directory) are located in `TestData\TestSuite`.
 

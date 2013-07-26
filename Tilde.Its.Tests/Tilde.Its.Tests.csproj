@@ -91,9 +91,6 @@
     <None Include="TestData\TestSuite\expected\domain\html\domain3htmloutput.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="TestData\TestSuite\expected\domain\html\domain4htmloutput.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="TestData\TestSuite\expected\domain\xml\domain1xmloutput.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -119,9 +116,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TestData\TestSuite\expected\elementswithintext\html\withintext3htmloutput.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TestData\TestSuite\expected\elementswithintext\html\withintext4htmloutput.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TestData\TestSuite\expected\elementswithintext\xml\withintext1xmloutput.txt">
@@ -308,9 +302,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TestData\TestSuite\inputdata\domain\html\domain3htmlrules.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TestData\TestSuite\inputdata\domain\html\domain4html.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TestData\TestSuite\inputdata\domain\xml\domain1xml.xml">
@@ -601,7 +592,6 @@
     <None Include="TestData\TestSuite\outputimplementors\tilde\domain\html\domain1htmloutput.txt" />
     <None Include="TestData\TestSuite\outputimplementors\tilde\domain\html\domain2htmloutput.txt" />
     <None Include="TestData\TestSuite\outputimplementors\tilde\domain\html\domain3htmloutput.txt" />
-    <None Include="TestData\TestSuite\outputimplementors\tilde\domain\html\domain4htmloutput.txt" />
     <None Include="TestData\TestSuite\outputimplementors\tilde\domain\xml\domain1xmloutput.txt" />
     <None Include="TestData\TestSuite\outputimplementors\tilde\domain\xml\domain2xmloutput.txt" />
     <None Include="TestData\TestSuite\outputimplementors\tilde\domain\xml\domain4xmloutput.txt" />
@@ -1039,76 +1029,79 @@
     <None Include="TestData\TestSuite\inputdata\storagesize\xml\storagesize9xml.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\html\allowedcharacters1htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\html\allowedcharacters2htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\html\allowedcharacters3htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\html\allowedcharacters4htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters4xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters5xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters6xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters7xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters8xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote1htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote2htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote3htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote4htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote5htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote6htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote7htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote8htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote9htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote10xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote11xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote4xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote5xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote6xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote7xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote8xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote9xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence1htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence2htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence3htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence4htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence5htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence4xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence5xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence6xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence7xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace4xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace5xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace6xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\html\storagesize1htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\html\storagesize2htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\html\storagesize3htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\html\storagesize4htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize4xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize5xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize6xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize7xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize8xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize9xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\html\targetpointer1htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\html\targetpointer2htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\html\targetpointer3htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\xml\targetpointer1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\xml\targetpointer2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\xml\targetpointer3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\xml\targetpointer4xmloutput.txt" />
+    <None Include="TestData\TestSuite\expected\elementswithintext\html\withintext4htmloutput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\html\allowedcharacters1htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\html\allowedcharacters2htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\html\allowedcharacters3htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\html\allowedcharacters4htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters4xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters5xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters6xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters7xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\allowedcharacters\xml\allowedcharacters8xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote1htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote2htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote3htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote4htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote5htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote6htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote7htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote8htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\html\locnote9htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote10xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote11xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote4xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote5xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote6xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote7xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote8xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localizationnote\xml\locnote9xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence1htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence2htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence3htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence4htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\html\mtconfidence5htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence4xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence5xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence6xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\mtconfidence\xml\mtconfidence7xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace4xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace5xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\preservespace\xml\preservespace6xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\html\storagesize1htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\html\storagesize2htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\html\storagesize3htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\html\storagesize4htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize4xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize5xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize6xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize7xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize8xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\storagesize\xml\storagesize9xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\html\targetpointer1htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\html\targetpointer2htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\html\targetpointer3htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\xml\targetpointer1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\xml\targetpointer2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\xml\targetpointer3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\targetpointer\xml\targetpointer4xmloutput.txt" />
     <None Include="TestData\TestSuite\inputdata\targetpointer\html\targetpointer1html.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -1490,46 +1483,46 @@
     <None Include="TestData\TestSuite\expected\mtconfidence\xml\mtconfidence7xmloutput.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\html\dir1htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\html\dir2htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\html\dir3htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\html\dir4htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir4xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir5xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir6xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\externalresource\html\externalresource1htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\externalresource\html\externalresource2htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\externalresource\html\externalresource3htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource4xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource5xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\idvalue\html\idvalue1htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\idvalue\html\idvalue2htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\idvalue\html\idvalue3htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue1xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue2xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue3xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue4xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue5xmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localefilter\html\locale5htmloutput.txt" />
-    <Content Include="TestData\TestSuite\outputimplementors\tilde\localefilter\xml\locale8xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\html\dir1htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\html\dir2htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\html\dir3htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\html\dir4htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir4xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir5xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\directionality\xml\dir6xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\externalresource\html\externalresource1htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\externalresource\html\externalresource2htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\externalresource\html\externalresource3htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource4xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\externalresource\xml\externalresource5xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\idvalue\html\idvalue1htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\idvalue\html\idvalue2htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\idvalue\html\idvalue3htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue1xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue2xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue3xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue4xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\idvalue\xml\idvalue5xmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localefilter\html\locale5htmloutput.txt" />
+    <None Include="TestData\TestSuite\outputimplementors\tilde\localefilter\xml\locale8xmloutput.txt" />
     <None Include="TestData\TestSuite\expected\localefilter\html\locale5htmloutput.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="TestData\TestSuite\expected\localefilter\xml\locale8xmloutput.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="TestData\TestSuite\inputdata\localefilter\html\locale5html.html">
+    <None Include="TestData\TestSuite\inputdata\localefilter\html\locale5html.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestData\TestSuite\inputdata\localefilter\xml\locale8xml.xml">
+    </None>
+    <None Include="TestData\TestSuite\inputdata\localefilter\xml\locale8xml.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

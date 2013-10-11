@@ -124,9 +124,6 @@ namespace Tilde.Taws.Models
                 // domain
                 if (string.IsNullOrWhiteSpace(domain))
                     domain = null;
-                if (domain != null)
-                    if (domain.StartsWith("eurovoc-"))
-                        domain = domain.Substring("eurovoc-".Length);
 
                 // text
                 if (string.IsNullOrWhiteSpace(text))
@@ -135,7 +132,7 @@ namespace Tilde.Taws.Models
                 if (Method == null)
                     return text;
 
-                string url = ServerUrl + string.Format("/extraction/?sourceLang={0}&domain={1}&method={2}&targetLang=",
+                string url = ServerUrl + string.Format("/extraction/?sourceLang={0}&domain={1}&method={2}&collection=etb",
                     language, Uri.EscapeUriString(domain ?? ""), Method);
 
                 // send the first n characters of the text

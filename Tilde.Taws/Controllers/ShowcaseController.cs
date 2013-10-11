@@ -209,30 +209,25 @@ namespace Tilde.Taws.Controllers
 
             CultureInfo culture = new CultureInfo("en-US");
             ViewBag.Domains = new List<SelectListItem>();
-            var mainDomains = from domain in ShowcaseConfig.Settings.Root.Element("eurovoc").Descendants("row")
-                              where domain.Attribute("subject_id").Value.Length == 2
-                              orderby domain.Attribute("description").Value
+            var mainDomains = from domain in ShowcaseConfig.Settings.Root.Element("domains").Elements("domain")
                               select domain;
             foreach (XElement domain in mainDomains)
             {
                 ViewBag.Domains.Add(new SelectListItem
                 {
-                    Value = "eurovoc-" + domain.Attribute("subject_id").Value,
-                    Text = culture.TextInfo.ToSentenceCase(domain.Attribute("description").Value)
+                    Value = domain.Attribute("id").Value,
+                    Text = domain.Attribute("name").Value
                 });
 
-                var subdomains = from subdomain in ShowcaseConfig.Settings.Root.Element("eurovoc").Descendants("row")
-                                 where subdomain.Attribute("subject_id").Value.Length == 4
-                                 where subdomain.Attribute("subject_id").Value.StartsWith(domain.Attribute("subject_id").Value)
-                                 orderby subdomain.Attribute("description").Value
+                var subdomains = from subdomain in domain.Elements("domain")
                                  select subdomain;
 
                 foreach (XElement subdomain in subdomains)
                 {
                     ViewBag.Domains.Add(new SelectListItem
                     {
-                        Value = "eurovoc-" + subdomain.Attribute("subject_id").Value,
-                        Text = "-- " + culture.TextInfo.ToSentenceCase(subdomain.Attribute("description").Value)
+                        Value = subdomain.Attribute("id").Value,
+                        Text = "-- " + subdomain.Attribute("name").Value
                     });
                 }
             }

@@ -151,7 +151,6 @@
     <Content Include="Content\scripts\visualization.js" />
     <Content Include="Content\styles\jquery-ui.css" />
     <Content Include="Content\styles\visualization.css" />
-    <None Include="Readme.md" />
     <Content Include="Views\Showcase\Plaintext.cshtml" />
     <Content Include="Views\Showcase\Results.cshtml" />
     <Content Include="Views\Showcase\About.cshtml" />
@@ -183,6 +182,7 @@
     <Content Include="Views\Showcase\Form.cshtml" />
     <Content Include="Views\Showcase\Xliff.cshtml" />
     <Content Include="Views\Showcase\Contact.cshtml" />
+    <None Include="Properties\PublishProfiles\production.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

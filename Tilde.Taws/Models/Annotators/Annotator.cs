@@ -35,6 +35,10 @@ namespace Tilde.Taws.Models
         /// ITS 2.0 namespace.
         /// </summary>
         public static readonly XNamespace ItsNamespace = Tilde.Its.ItsDocument.ItsNamespace;
+        /// <summary>
+        /// Identifies the TWSC tool that finds terms statistically.
+        /// </summary>
+        private const string StatisticalExtractorUri = "http://taas.eurotermbank.com/extractor";
 
         /// <summary>
         /// Annotation web service.
@@ -497,12 +501,29 @@ namespace Tilde.Taws.Models
                 // this code gets all of them
                 List<XDocument> termEntries = new List<XDocument>();
                 string[] ids = tename.TermID.Split(Tename.IdSeparator);
+                bool statisticalOnly = false;
                 foreach (string id in ids)
                 {
                     XDocument termEntry = GetTermEntry(id);
                     if (termEntry != null)
+                    {
                         termEntries.Add(new XDocument(termEntry));
+
+                        // previously tename's without termID were the terms tagged by the statistical tool
+                        // now, all terms may have a termID
+                        // terms that have no translations are statistically extracted
+                        // and we don't add a tbx which is how they are identified in the visualization page i.e. no tbx = statistical
+                        var sources = termEntry.Descendants("xref").Where(e => e.Attribute("target") != null).Select(e => e.Attribute("target").Value).Distinct().ToList();
+                        if (sources.Count == 1 && sources.Single() == StatisticalExtractorUri)
+                        {
+                            statisticalOnly = true;
+                            break;
+                        }
+                    }
                 }
+
+                if (statisticalOnly)
+                    continue;
 
                 if (termEntries.Count > 0)
                 {

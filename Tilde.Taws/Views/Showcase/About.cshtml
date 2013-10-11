@@ -100,11 +100,11 @@ Content-Type: text/html; charset=utf-8
         <p>Every single piece of text in a document must have a language identifier or it will not be annotated since the language is unknown. You can add a <code>lang</code> parameter to the query string to set the default language of the content without modifying the markup.</p>
         <code>/api/html5?lang=en</code>
 
-        <p>The Domain data category identifies the topic of the document content. If the document contains no domain information, terminology from all domains is annotated. You can optionally add one or more <code>domain</code> parameters to the query string to set the default domain(s) of the content without modifying the markup. Each domain must be a <em>EuroVoc</em> domain code (two or four digit string). A parent domain (two digit code) includes all child domains.</p>
+        <p>The Domain data category identifies the topic of the document content. If the document contains no domain information, terminology from all domains is annotated. You can optionally add one or more <code>domain</code> parameters to the query string to set the default domain(s) of the content without modifying the markup. Each domain must be a <em>TaaS</em> domain code ("TaaS-" followed by four digits, e.g., TaaS-1500). A parent domain includes all child domains.</p>
         <code>
-        /api/html5?domain=32<br />
-        /api/html5?domain=66&domain=2441<br />
-        /api/html5?lang=en&domain=32&domain=40<br />
+        /api/html5?domain=TaaS-1500<br />
+        /api/html5?domain=TaaS-2000&domain=TaaS-1501<br />
+        /api/html5?lang=en&domain=TaaS-1501&domain=TaaS-2200<br />
         </code>
 
         <p>If your document contains references to external rules with relative paths (e.g., <code>&lt;link rel="its-rules" href="rules.xml"&gt;</code>), you can add a <code>baseUri</code> parameter specifying an accessible base path (e.g., <code>http://example.org/its/</code>), otherwise the rules cannot be loaded by TAWS.</p>
@@ -117,7 +117,7 @@ Content-Type: text/html; charset=utf-8
         <code>
         /api/html5?method=statistical<br />
         /api/html5?method=termbank<br />
-        /api/html5?lang=en&domain=32&method=termbank
+        /api/html5?lang=en&domain=TaaS-1501&method=termbank
         </code>
         <p>Note that the Domain data category is ignored if the <em>Term bank based terminology annotation</em> (<code>termbank</code>) method is not used.</p>
 
@@ -137,7 +137,7 @@ Content-Type: text/html; charset=utf-8
         <h3>Limitations</h3>
         <ul>
             <li>Only input in UTF-8 is supported.</li>
-            <li>Domain values are limited to <em>EuroVoc</em> codes.</li>
+            <li>Domain values are limited to <em>TaaS</em> codes.</li>
             <li>Only the first 50 000 characters of the submitted document will be annotated.<br />The remaining document will be returned to the user without annotated terminology.<br />This is a limitation for showcase purposes in order not to allow misuse of the service.</li>
         </ul>
     </div>

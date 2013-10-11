@@ -13,7 +13,7 @@ namespace Tilde.Its.Tests.TestSuite
         [TestMethod] public void TestSuite_Domain_Html_domain1() { TestSuiteTestHtml(1); }
         [TestMethod] public void TestSuite_Domain_Html_domain2() { TestSuiteTestHtml(2); }
         [TestMethod] public void TestSuite_Domain_Html_domain3() { TestSuiteTestHtml(3); }
-        //[TestMethod] public void TestSuite_Domain_Html_domain4() { TestSuiteTestHtml(4); }
+        [TestMethod] public void TestSuite_Domain_Html_domain4() { TestSuiteTestHtml(4); }
 
         [TestMethod] public void TestSuite_Domain_Xml_domain1() { TestSuiteTestXml(1); }
         [TestMethod] public void TestSuite_Domain_Xml_domain2() { TestSuiteTestXml(2); }
